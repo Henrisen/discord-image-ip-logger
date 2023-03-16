@@ -21,3 +21,5 @@ Set vars to:
     12345678901234567890123456789012345678901234567890123456789012345678 #WEBHOOK_TOKEN
 
 You may need to expose the port you entered in the .env file to make this work.
+
+This will not work if the ip of your target starts with 3
