@@ -6,14 +6,15 @@ from dotenv import load_dotenv
 load_dotenv()
 rs = str(random.randint(1, 100000000000000))
 data = {
-    "username": "ExampleUser",
-    "avatar_url": "https://avatars.githubusercontent.com/u/10000",
-    "img_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Example_image.svg/600px-Example_image.svg.png",
+    "username": os.getenv('username'),
+    "avatar_url": os.getenv('avatar_url'),
+    "img_url": os.getenv('image_url')
+
 }
 
 embed = {
     "image": {
-        "url": "http://%s:5000/img_%s.png" % (os.environ("pub_ip"), rs)
+        "url": "http://%s:"+os.getenv('port')+"/img_%s.png" % (os.environ("pub_ip"), rs)
     }
 }
 
@@ -65,4 +66,4 @@ def index():
     open("ip.log", 'a').write(n + "|" + request.remote_addr + "\n")
     return send_file("img2.png", mimetype="image/png")
 
-app.run(host="0.0.0.0", port=5000)
+app.run(host="0.0.0.0", port=int(os.getenv('port')))
