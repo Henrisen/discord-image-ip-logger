@@ -17,3 +17,5 @@ Set vars to:
     12345678901234567890123456789012345678901234567890123456789012345678 #WEBHOOK_TOKEN
 
 You may need to expose port 5000 to make this work. 
+
+Replace img2.png with your image file.
