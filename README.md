@@ -11,7 +11,7 @@ Write the following into the .env file:
     port="<PORT>"
     username="<BOT_USERNAME>"
     avatar_url="<BOT_PROFILE_PIC_URL>"
-    image_url="<YOZR_IMAGE_URL>"
+    image_url="<YOUR_IMAGE_URL>"
 
 Set vars to:
 
